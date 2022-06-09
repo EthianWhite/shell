@@ -1,8 +1,9 @@
 #!/usr/bin/env bash
 # Wrute a bash script that displays "Best School" 10 times using until
+
 op=0
-po=9
-until [ $op -lt $po ];
+
+until (( op == 10 ));
 do
 	echo "Best School";
 	(( op++ ));
