@@ -2,8 +2,8 @@
 # Wrute a bash script that displays "Best School" 10 times using until
 op=0
 po=9
-until [ $op -lt $po ]
+until [ $op -lt $po ];
 do
-	echo "Best School"
-	((op=op+1))
+	echo "Best School";
+	(( op++ ));
 done
