@@ -5,5 +5,5 @@ po=9
 until [ $op -lt $po ]
 do
 	echo "Best School"
-	op=$((op+1))
+	((op=op+1))
 done
