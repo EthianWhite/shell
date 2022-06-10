@@ -5,5 +5,5 @@ i="/etc/passwd"
 
 while IFS=":" read -r USER PASS UID GID GECOS HOME COMMAND;
 do
-	echo -e "The user $USER is part of the $GID gang, lives in $HOME and rides $COMMAND. $UID's place is protected by the passcode $PASS, more info about the user here: $GECOS"
+	 "The user $USER is part of the $GID gang, lives in $HOME and rides $COMMAND. $UID's place is protected by the passcode $PASS, more info about the user here: $GECOS"
 done < "$i" 
