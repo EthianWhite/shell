@@ -17,7 +17,7 @@ do
 	if (( i%5 == 0 ));
 	then
 		echo "Buzz"
-	else
+	elif (( i%15 != 0 ))
 	    echo -e "$i"
 	fi
 	i=$((i+1))
