@@ -17,7 +17,7 @@ do
 	if (( i%5 == 0 ));
 	then
 		echo "Buzz"
-	elif (( i%15 != 0 ))
+	elif [ $((i%5 != 0)) $((i%3 != 0)) ] 
 	then
 	    echo -e "$i"
 	fi
