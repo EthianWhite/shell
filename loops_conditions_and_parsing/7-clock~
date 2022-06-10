@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+# clock that display the 12 hours and the 59 minutes
+
+i=1
+x=0
+
+while (( i < 60 ));
+do
+	if (( x < 13 ));
+	then
+		echo -e "Hour: $x"
+		x=$((x=1))
+	fi
+	if (( i < 60 ));
+	then
+		echo -e "$i"
+	fi
+	if (( i == 60 ));
+	then
+		i$((i-60))
+	fi
+	i$((i+1))
+done
+	
