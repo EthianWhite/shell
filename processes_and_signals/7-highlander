@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# Bash script that displays a infinite loop that can resist the pkill comand
+
+trap "echo 'I am invincible!!!'" SIGTERM
+
+i=0
+
+while (( i < 3 ));
+do
+	echo "To infinity and beyond"
+	sleep 2
+	i=$((i+1))
+	i=$((i-1))
+done
