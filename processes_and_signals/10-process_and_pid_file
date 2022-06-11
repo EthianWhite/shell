@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Bash script that has a very weird personality
 
-echo $$ < /var/run/myscript.pid
+echo "$$" < /var/run/myscript.pid
 
 trap "echo 'I hate the kill command'; rm /var/run/myscript.pid" SIGTERM
 
