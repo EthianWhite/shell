@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# Bash script that contains a infinite loop
+
+i=0
+
+while (( i < 3 ));
+do
+	echo "I am alive" >> /tmp/my_process
+	sleep 2
+	i=$((i+1))
+	i=$((i-1))
+done

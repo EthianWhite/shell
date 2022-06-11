@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+# Bash script that manage the infinite loop in script "manage_my_process"
+
+x=$1
+i="/var/run/my_process.pid"
+
+case "$x" in
+     start)
+	echo "manage_my_process started"
+	./manage_my_process & echo "$!" > "$i"
+	;;
+     stop)
+	echo "manage_my_process stopped"
+	sudo pkill -f "./manage_my_process"; rm "$i"
+	;;
+     restart)
+	echo "manage_my_process restarted"
+	sudo pkill -f "./manage_my_process"; rm "$i"
+	./manage_my_process & echo "$!" > "$i"
+	;;
+     *)
+	echo "Usage: manage_my_process {start|stop|restart}"
+	;;
+esac
